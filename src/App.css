@@ -12,3 +12,13 @@ body {
 
     
 }
+.lists {
+    margin-top: -150px;
+}
+footer {
+    margin: 50px 0;
+    text-align: center;
+}
+footer img {
+    height: 50px;
+}

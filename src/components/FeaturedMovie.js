@@ -4,7 +4,13 @@ import './FeaturedMovie.css';
 export default ({item}) => {
     console.log(item);
 
-    let firstDate = new Date(item.first_air_date);
+    let firstDate = new Date(item.first_air_date); //Função utilizada pra resgatar apenas o ano da data completa
+
+    let genres = [];
+    for(let i in item.genres) {
+        genres.push(item.genres[i].name);
+    }
+
 
     return (
         <section className="featured" style={{
@@ -23,9 +29,10 @@ export default ({item}) => {
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-
+                        <a href={`/watch/${item.id}`} className="featured--watchbutton">&#9654;  Assistir</a>
+                        <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ Minha Lista</a>
                     </div>
-                    <div className="featured--genres"><strong>Gêneros</strong> ... </div>
+                    <div className="featured--genres"><strong>Gêneros: </strong> {genres.join(', ')} </div>
                 </div>
 
             </div>
