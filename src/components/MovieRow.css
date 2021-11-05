@@ -1,0 +1,27 @@
+.movieRow {
+    margin-bottom: 30px;
+}
+.movieRow h2 {
+    margin: 0 0 0 30px;
+}
+.movieRow--listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movieRow--list {
+    width: 999999px;
+}
+.movieRow--item {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer; /*Coloca o ícone de mão selecionadora no cursor*/
+
+}
+.movieRow--item img {
+    width: 100%;
+    transform: scale(0.9); /*Tag usada pra diminuir o item de 100% (1) para 90% (0.9)*/
+    transition: all ease 0.2s; /*Personaliza a velocidade de transição entre os tamanho da imagens que estão sendo transformadas pelo atibuto anterior*/
+}
+.movieRow--item img:hover { /* HOVER = PAIRAR */
+    transform: scale(1);
+}
