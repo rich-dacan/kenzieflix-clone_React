@@ -5,13 +5,20 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext'; //Agora foi!!
 
 
 export default ({title, items})=>{
+    const handleLeftArrow = () => {
+
+    }
+    
+    const handleRightArrow = () => {
+        
+    }
     return (
         <div className="movieRow"> 
             <h2>{title}</h2>
-            <div className="movieRow--left">
+            <div className="movieRow--left" onClick={handleLeftArrow}>
                 <NavigateBeforeIcon style={{fontSize: 50}} />
             </div>
-            <div className="movieRow--right">
+            <div className="movieRow--right" onClick={handleRightArrow}>
                 <NavigateNextIcon style={{fontSize: 50}} />
             </div>
             <div className="movieRow--listarea">
