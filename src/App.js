@@ -68,8 +68,15 @@ export default () => {
             <footer>
                 Made for expansion <span role="img" aria-label="rocket">&#128640;</span>, by <a href="https://github.com/Rich-Dacan/" target="_blank"><img src="https://pngimg.com/uploads/github/github_PNG3.png" alt="instagram icon" /></a><br/>
                 Direitos de imagem para Netflix!<br/>
-                Dados originários  do site Themoviedb.org!
+                Dados fornecidos pelo site themoviedb.org!
             </footer>
+
+            {movieList.length <= 0 &&  
+
+                <div className="loading">
+                    <img src="https://spoilertime.com/wp-content/uploads/2019/03/Netflix_LoadTime.gif" alt="Loading ... " />
+                </div>
+            }
 
         </div>
     );
